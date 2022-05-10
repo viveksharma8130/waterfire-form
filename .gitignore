@@ -10,7 +10,8 @@
 
 # production
 /build
-
+/waterfireform
+*.zip
 # misc
 .DS_Store
 .env.local

@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    background-color: #e5ebfa;
+}
+
+.service_form {
+    padding: 2em 0;
+    position: relative;
+
+    .logo_wrap {
+        margin: 2em 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .title {
+            font-size: 35px;
+            margin-left: 20px;
+            font-weight: 700;
+            opacity: 0.7;
+        }
+    }
+    .left_panel {
+        background-color: #012241;
+        padding: 50px 30px;
+        border-radius: 15px 0 0 15px;
+        color: #fff;
+        .head {
+            h1 {
+                font-size: 30px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            p {
+                color: #fff;
+                opacity: 0.7;
+            }
+        }
+        .inner_sec {
+            margin-top: 30px;
+            .info {
+                li {
+                    list-style: none;
+                    margin-bottom: 25px;
+                    opacity: 0.9;
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                    svg {
+                        margin-right: 15px;
+                    }
+                }
+            }
+            .social_icon {
+                display: flex;
+                margin-top: 40px;
+                a {
+                    img {
+                        width: 25px;
+                        display: inline-block;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .myshadow {
+        box-shadow: -1px 15px 33px 4px #0000000f;
+        border-radius: 0 25px 70px 0;
+        .form_inner_wrap {
+            .form {
+                padding: 50px 30px;
+                .successmsg {
+                    text-align: center;
+                    .icon {
+                        color: #43a047;
+                        margin-bottom: 20px;
+                        .MuiSvgIcon-fontSizeLarge {
+                            font-size: 60px;
+                        }
+                    }
+                    p {
+                        color: #869298;
+                    }
+                }
+                h3 {
+                    font-weight: 600;
+                    font-size: 25px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    form {
+        position: relative;
+        .action_btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 9;
+            width: 140px;
+            height: 120px;
+            border-radius: 70px 0;
+            background: #012241;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button {
+                color: #fff;
+                &.Mui-disabled {
+                    color: #727272;
+                }
+            }
+        }
+        input.form-control {
+            border: 1px solid #43a047;
+            height: 50px;
+            &:focus {
+                box-shadow: 0 0 0 0.2rem #43a04747;
+            }
+        }
+        textarea.form-control {
+            border: 1px solid #43a047;
+            &:focus {
+                box-shadow: 0 0 0 0.2rem #43a04747;
+            }
+        }
+    }
+    .MuiLinearProgress-colorPrimary {
+        background-color: #7bc27f61;
+    }
+    .MuiLinearProgress-barColorPrimary {
+        background-color: #43a047;
+    }
+}
+
+// Responsive
+@media (min-width: 320px) and (max-width: 520px) {
+    .mobhide {
+        display: none;
+    }
+    .service_forms {
+        .myshadow {
+            .form_inner_wrap {
+                .form {
+                    h3 {
+                        font-size: 18px !important;
+                    }
+                    .MuiTypography-body1 {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .action_btn {
+                height: 90px;
+            }
+        }
+        .form-group {
+            label {
+                font-size: 13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,244 @@
+{
+  "step1": [
+    { "id": "step_1-1", "question": "I want more customers & leads" },
+    { "id": "step_1-2", "question": "I want to earn more sales" },
+    { "id": "step_1-3", "question": "I want to improve my ROI" },
+    { "id": "step_1-4", "question": "I want more people to know about my business" },
+    { "id": "step_1-5", "question": "I want investors for my business" },
+    { "id": "step_1-6", "question": "Other" }
+  ],
+  "step2": [
+    { "id": "step_2-1", "question": "Website Design","optionKey": "website_design" },
+    { "id": "step_2-2", "question": "Digital Advertising" },
+    { "id": "step_2-4",  "question": "Seo" },
+    { "id": "step_2-3",  "question": "Social media",  "optionKey": "social_media" },
+    { "id": "step_2-5", "question": "Marketplaces",  "name": "marketplaces" },
+    { "id": "step_2-6", "question": "Graphic Design", "optionKey": "graphic_design" },
+    { "id": "step_2-7", "question": "Pitch Deck", "optionKey": "pitch_deck" },
+    { "id": "step_2-8", "question": "Other" }
+  ],
+  "website_design": [
+    {
+      "name": "Choose Your Website Type",
+      "options": [
+        { "id": "website_type-1", "question": "E-Commerce" },
+        { "id": "website_type-2", "question": "Blog" },
+        { "id": "website_type-3", "question": "Portfolio" },
+        { "id": "website_type-4", "question": "Landing page" },
+        { "id": "website_type-5", "question": "Directory/Database" },
+        { "id": "website_type-6", "question": "Business/Informative" },
+        { "id": "website_type-7", "question": "Help me decide" }
+      ]
+    },
+    {
+      "name": "Number of pages",
+      "options": [
+        { "id": "num_of_page-1", "question": "1-5" },
+        { "id": "num_of_page-2", "question": "5-10" },
+        { "id": "num_of_page-3", "question": "10-20" },
+        { "id": "num_of_page-4", "question": "20-50" },
+        { "id": "num_of_page-5", "question": "50-100" },
+        { "id": "num_of_page-6", "question": "More than 100" },
+        { "id": "num_of_page-7", "question": "Help me decide" }
+      ]
+    },
+    {
+      "name": "Desgin Style",
+      "options": [
+        {
+          "id": "design_style-1",
+          "question": "Minimal & Classy"
+        },
+        {
+          "id": "design_style-2",
+          "question": "Fun & Quirky"
+         
+        },
+        {
+          "id": "design_style-3",
+          "question": "Art Director’s Choice"
+        },
+        {
+          "id": "design_style-4",
+          "question": "Edgy and Sharp"
+        },
+        {
+          "id": "design_style-5",
+          "question": "Moderately Designed"
+        },
+        {
+          "id": "design_style-6",
+          "question": "Moderately designed with animations"
+        },
+        {
+          "id": "design_style-7",
+          "question": "Hi-End Design"
+        },
+        {
+          "id": "design_style-8",
+          "question": "Hi-End Design With Animations"
+        },
+        {
+          "id": "design_style-9",
+          "question": "SaaS Style"
+        },
+        {
+          "id": "design_style-10",
+          "question": "Help me decide"
+        }
+      ]
+    },
+    {
+      "name": "Copywriting",
+      "options": [
+        { "id": "copywriting-1", "question": "1-5 pages" },
+        { "id": "copywriting-2", "question": "5-10 pages" },
+        { "id": "copywriting-4", "question": "20-50 pages" },
+        { "id": "copywriting-6", "question": "More than 50" },
+        { "id": "copywriting-7", "question": "Not Required" },
+        { "id": "copywriting-7", "question": "Help me decide" }
+      ]
+    },
+    {
+      "name": "Seo",
+      "options": [
+        { "id": "web_seo-1", "question": "10 keywords" },
+        { "id": "web_seo-2", "question": "30 keywords" },
+        { "id": "web_seo-4", "question": "50 keywords" },
+        { "id": "web_seo-6", "question": "100 keywords" },
+        { "id": "web_seo-7", "question": "Not Required" },
+        { "id": "web_seo-7", "question": "Help me decide" }
+      ]
+    },
+    {
+      "name": "Data Base Integration",
+      "options": [
+        { "id": "data_base_integration-1", "question": "Basic" },
+        { "id": "data_base_integration-2", "question": "Moderate" },
+        { "id": "data_base_integration-4", "question": "Advance" },
+        { "id": "data_base_integration-6", "question": "None" }
+      ]
+    },
+    {
+      "name": "Payment gateway integration",
+      "options": [
+        { "id": "payment_gateway_integration-1", "question": "Yes" },
+        { "id": "payment_gateway_integration-2", "question": "No" }
+      ]
+    },
+    {
+      "name": "CMS",
+      "options": [
+        { "id": "cms-1", "question": "Standard" },
+        { "id": "cms-2", "question": "Advance" },
+        { "id": "cms-2", "question": "Not required" }
+      ]
+    }
+  ],
+  "graphic_Design": [
+    {
+      "name": "Choose your preferred service",
+      "options": [
+        { "id": "graphic_design--1", "question": "Logo & Branding" },
+        { "id": "graphic_design--2", "question": "Social Media Banners & Thumbnails (At Least 50 designs)" },
+        { "id": "graphic_design--3", "question": "Catalogues/Magazines/Books" },
+        { "id": "graphic_design--4", "question": "Print Graphics (Hoardings, Flyers, Standees, etc.)" },
+        { "id": "graphic_design--5", "question": "Cover Designs" },
+        { "id": "graphic_design--5", "question": "Fabric print" }
+      ]
+    }
+  ],
+ 
+  "social_media": [
+    {
+      "name": "How many channels do you want us to manage",
+      "options": [
+        { "id": "social_media--1", "question": "1 channel" },
+        { "id": "social_media--2", "question": "2 channels" },
+        { "id": "social_media--3", "question": "3 channels" },
+        { "id": "social_media--4", "question": "4 channels" },
+        { "id": "social_media--5", "question": "5 or more than 5 channels" }
+      ]
+    }
+  ],
+  "pitch_deck": [
+    {
+      "name": "Choose no. of slides",
+      "options": [
+        { "id": "pitch_deck--1", "question": "1-5" },
+        { "id": "pitch_deck--2", "question": "5-10" },
+        { "id": "pitch_deck--3", "question": "10-20+" },
+        { "id": "pitch_deck--4", "question": "Help me decide" }
+      ]
+    },
+    {
+      "name": "Purpose of pitch deck",
+      "options": [
+        { "id": "purpose_of_pitch-deck--1", "question": "Seed Funding" },
+        { "id": "purpose_of_pitch-deck--1", "question": "IPO" },
+        { "id": "purpose_of_pitch-deck--1", "question": "Debt" },
+        { "id": "purpose_of_pitch-deck--1", "question": "Proposal" },
+        { "id": "purpose_of_pitch-deck--2", "question": "Round A Investment" },
+        { "id": "purpose_of_pitch-deck--3", "question": "Round B Investment" },
+        { "id": "purpose_of_pitch-deck--4", "question": "Round C Investment" }
+      ]
+    }
+  ],
+  "worked_with_agency": [
+    {
+      "id": "contact-1",
+      "question": "Have you worked with any agency in the past?",
+      "options": [
+        { "id": "contact-Yes", "question": "Yes" },
+        { "id": "contact-No", "question": "No" }
+      ],
+      "type": "radio"
+    }
+  ],
+  "contact_details": [
+    {
+      "id": "contact-2",
+      "question": "Is there anything else you would like us to know about your project?",
+      "type": "textarea"
+    },
+
+    {
+      "id": "contact-4",
+      "question": "Thank you for helping us with your project brief. Help us know you better",
+      "type": "static"
+    },
+    {
+      "id": "contact-5",
+      "question": "Company Name",
+      "type": "text"
+    },
+    {
+      "id": "contact-6",
+      "question": "Your name",
+      "type": "text",
+      "autocomplete": "name"
+    },
+    {
+      "id": "contact-7",
+      "question": "Company Website",
+      "type": "text"
+    },
+    {
+      "id": "contact-8",
+      "question": "Your work email address",
+      "type": "email"
+    },
+    {
+      "id": "contact-9",
+      "question": "Your work contact number",
+      "type": "text",
+      "autocomplete": "tel"
+    },
+
+    {
+      "id": "contact-10",
+      "question": "Your preferred contact timings",
+      "type": "text"
+    }
+  ]
+}

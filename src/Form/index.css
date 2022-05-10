@@ -1,0 +1,9 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-input-container {
+  display: flex;
+  flex-direction: column;
+}

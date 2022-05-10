@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  background-color: #e5ebfa;
+}
+
+.service_form {
+  padding: 2em 0;
+  position: relative;
+}
+
+.service_form .logo_wrap {
+  margin: 2em 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.service_form .logo_wrap .title {
+  font-size: 35px;
+  margin-left: 20px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.service_form .left_panel {
+  background-color: #012241;
+  padding: 50px 30px;
+  border-radius: 15px 0 0 15px;
+  color: #fff;
+}
+
+.service_form .left_panel .head h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.service_form .left_panel .head p {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.service_form .left_panel .inner_sec {
+  margin-top: 30px;
+}
+
+.service_form .left_panel .inner_sec .info li {
+  list-style: none;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.service_form .left_panel .inner_sec .info li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.service_form .left_panel .inner_sec .info li svg {
+  margin-right: 15px;
+}
+
+.service_form .left_panel .inner_sec .social_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.service_form .left_panel .inner_sec .social_icon a img {
+  width: 25px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.service_form .myshadow {
+  -webkit-box-shadow: -1px 15px 33px 4px #0000000f;
+          box-shadow: -1px 15px 33px 4px #0000000f;
+  border-radius: 0 25px 70px 0;
+}
+
+.service_form .myshadow .form_inner_wrap .form {
+  padding: 50px 30px;
+}
+
+.service_form .myshadow .form_inner_wrap .form .successmsg {
+  text-align: center;
+}
+
+.service_form .myshadow .form_inner_wrap .form .successmsg .icon {
+  color: #43a047;
+  margin-bottom: 20px;
+}
+
+.service_form .myshadow .form_inner_wrap .form .successmsg .icon .MuiSvgIcon-fontSizeLarge {
+  font-size: 60px;
+}
+
+.service_form .myshadow .form_inner_wrap .form .successmsg p {
+  color: #869298;
+}
+
+.service_form .myshadow .form_inner_wrap .form h3 {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.service_form form {
+  position: relative;
+}
+
+.service_form form .action_btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+  width: 140px;
+  height: 120px;
+  border-radius: 70px 0;
+  background: #012241;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.service_form form .action_btn button {
+  color: #fff;
+}
+
+.service_form form .action_btn button.Mui-disabled {
+  color: #727272;
+}
+
+.service_form form input.form-control {
+  border: 1px solid #43a047;
+  height: 50px;
+}
+
+.service_form form input.form-control:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #43a04747;
+          box-shadow: 0 0 0 0.2rem #43a04747;
+}
+
+.service_form form textarea.form-control {
+  border: 1px solid #43a047;
+}
+
+.service_form form textarea.form-control:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #43a04747;
+          box-shadow: 0 0 0 0.2rem #43a04747;
+}
+
+.service_form .MuiLinearProgress-colorPrimary {
+  background-color: #7bc27f61;
+}
+
+.service_form .MuiLinearProgress-barColorPrimary {
+  background-color: #43a047;
+}
+
+@media (min-width: 320px) and (max-width: 520px) {
+  .mobhide {
+    display: none;
+  }
+  .service_forms .myshadow .form_inner_wrap .form h3 {
+    font-size: 18px !important;
+  }
+  .service_forms .myshadow .form_inner_wrap .form .MuiTypography-body1 {
+    font-size: 14px;
+  }
+  .service_forms .myshadow .action_btn {
+    height: 90px;
+  }
+  .service_forms .form-group label {
+    font-size: 13px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
