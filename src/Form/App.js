@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Col, Container, Form, Row } from "reactstrap";
+import { Col, Container, Form, FormGroup, Row } from "reactstrap";
 import { Card, IconButton } from "@material-ui/core";
 
 //Icons
@@ -13,45 +13,54 @@ import formData from "./form.json";
 import "./index.css";
 
 const RenderCheckbox = ({ register, fields }) => {
-  return fields.map((field, idx) => {
-    return (
-      <div className="custom-control custom-checkbox mb-3" key={idx}>
-        <input
-          type="checkbox"
-          className="custom-control-input"
-          {...register(field?.name ?? field?.optionKey ?? field.question)}
-          id={"mycheckbox" + field.id}
-        />
-        <label
-          className="custom-control-label"
-          htmlFor={"mycheckbox" + field.id}
-        >
-          {field.question}
-        </label>
-      </div>
-    );
-  });
+  return (
+    <Col lg="12">
+      <h3>{fields[0].name}</h3>
+      {fields[0].option.map((field) => (
+        <div className="custom-control custom-checkbox mb-3" key={field.id}>
+          <input
+            type="checkbox"
+            className="custom-control-input"
+            {...register(field?.name ?? field?.optionKey ?? field.question)}
+            id={"mycheckbox" + field.id}
+            value={field?.name ?? field?.optionKey ?? field.question}
+          />
+          <label
+            className="custom-control-label"
+            htmlFor={"mycheckbox" + field.id}
+          >
+            {field.question}
+          </label>
+        </div>
+      ))}
+    </Col>
+  );
 };
 
 const RadioInput = ({ options, register, name }) => {
-  return options.map((opt, idx) => (
-    <div className="custom-control custom-radio mb-3" key={idx}>
-      <input
-        name={name}
-        className="custom-control-input"
-        type="radio"
-        {...register(name)}
-        id={"myradio" + opt.id}
-      />
-      <label
-        key={idx}
-        className="custom-control-label"
-        htmlFor={"myradio" + opt.id}
-      >
-        {opt.question}
-      </label>
-    </div>
-  ));
+  return (
+    <Col lg="12">
+      <h3>{name}</h3>
+      {options.map((opt) => (
+        <div className="custom-control custom-radio mb-3" key={opt.id}>
+          <input
+            className="custom-control-input"
+            type="radio"
+            {...register(name)}
+            value={opt.question}
+            id={"myradio" + opt.id}
+          />
+          <label
+            key={opt.id}
+            className="custom-control-label"
+            htmlFor={"myradio" + opt.id}
+          >
+            {opt.question}
+          </label>
+        </div>
+      ))}
+    </Col>
+  );
 };
 
 const renderContactInput = (field, register) => {
@@ -67,9 +76,9 @@ const renderContactInput = (field, register) => {
 
     case "textarea":
       return (
-        <div>
+        <>
           <textarea
-            {...register(field.question)}
+            {...register(field.name)}
             className="form-control"
             placeholder="Type here..."
             rows="5"
@@ -78,8 +87,7 @@ const renderContactInput = (field, register) => {
           <br />
           <br />
           <br />
-          <br />
-        </div>
+        </>
       );
 
     case "static":
@@ -87,32 +95,51 @@ const renderContactInput = (field, register) => {
 
     default:
       return (
-        <input
-          {...register(field.question)}
-          type={field.type}
-          className="form-control"
-          placeholder={field.placeholder}
-        />
+        <FormGroup>
+          <input
+            {...register(field.name)}
+            type={field.type}
+            className="form-control"
+            placeholder={field.placeholder}
+          />
+        </FormGroup>
       );
   }
 };
 
 const ContactForm = ({ register, fields }) => {
-  return fields.map((field) => {
-    return (
-      <div className="contact-input-container" key={field.id}>
-        <label>{field.question}</label>
-        {renderContactInput(field, register)}
-      </div>
-    );
-  });
+  return (
+    <>
+      {fields[0].id === "contact-1" ? null : (
+        <Col lg="12">
+          <h3>Share your details</h3>
+        </Col>
+      )}
+      {fields.map((field) => (
+        <Col
+          lg={field.type === "textarea" || field.id === "contact-1" ? 12 : 6}
+          key={field.id}
+        >
+          <div className="contact-input-container">
+            {field.question ===
+            "Have you worked with any agency in the past?" ? null : (
+              <label>{field.question}</label>
+            )}
+            {renderContactInput(field, register)}
+          </div>
+        </Col>
+      ))}
+    </>
+  );
 };
 
 // extract the names of field which we want to watch
-const watchableFields = formData.step2.filter((item) => item?.optionKey);
+const watchableFields = formData.step2[0].option.filter(
+  (item) => item?.optionKey
+);
 const watchableFieldNames = watchableFields.map((item) => item.optionKey);
 
-function App() {
+const App = () => {
   const { register, watch, handleSubmit } = useForm();
 
   // const watchFields = watch();
@@ -177,8 +204,11 @@ function App() {
   }, [watch, register]);
 
   const submit = (values) => {
-    console.log(values);
+    for (const [keys, value] of Object.entries(values)) {
+      console.log(keys, ":", value);
+    }
   };
+
   return (
     <div className="service_form">
       <div className="service_forms">
@@ -186,42 +216,41 @@ function App() {
           <Row>
             <Col className="col-lg-12">
               <Card className="myshadow">
-                <Form>
+                <Form method="post" onSubmit={handleSubmit(submit)}>
                   <div className="form_inner_wrap">
                     <div className="form">
-                      <div className="input-container">
+                      <Row>
                         {pages.current[currentPage].component}
-                      </div>
-                      <div className="action_btn">
-                        <IconButton
-                          onClick={() => setCurrentPage(currentPage - 1)}
-                          disabled={!currentPage}
-                        >
-                          <KeyboardArrowLeftIcon
-                            fontSize="large"
-                            className="icons"
-                          />
-                        </IconButton>
-                        {currentPage === totalPages - 1 ? (
-                          <IconButton onClick={handleSubmit(submit)}>
-                            <SendIcon fontSize="large" className="icons" />
+                        <div className="action_btn">
+                          <IconButton
+                            onClick={() => setCurrentPage(currentPage - 1)}
+                            disabled={!currentPage}
+                          >
+                            <KeyboardArrowLeftIcon
+                              fontSize="large"
+                              className="icons"
+                            />
                           </IconButton>
-                        ) : null}
+                          {currentPage === totalPages - 1 ? (
+                            <IconButton type="submit">
+                              <SendIcon fontSize="large" className="icons" />
+                            </IconButton>
+                          ) : null}
 
-                        <IconButton
-                          onClick={() => setCurrentPage(currentPage + 1)}
-                          className={
-                            currentPage === totalPages - 1
-                              ? "d-none"
-                              : "d-block"
-                          }
-                        >
-                          <KeyboardArrowRightIcon
-                            fontSize="large"
-                            className="icons"
-                          />
-                        </IconButton>
-                        {/* <button
+                          <IconButton
+                            onClick={() => setCurrentPage(currentPage + 1)}
+                            className={
+                              currentPage === totalPages - 1
+                                ? "d-none"
+                                : "d-block"
+                            }
+                          >
+                            <KeyboardArrowRightIcon
+                              fontSize="large"
+                              className="icons"
+                            />
+                          </IconButton>
+                          {/* <button
                           // disable button when current page idx is 0
                           disabled={!currentPage}
                           onClick={() => setCurrentPage(currentPage - 1)}
@@ -236,7 +265,8 @@ function App() {
                         >
                           Next
                         </button> */}
-                      </div>
+                        </div>
+                      </Row>
                     </div>
                   </div>
                 </Form>
@@ -247,6 +277,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
