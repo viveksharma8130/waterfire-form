@@ -2,6 +2,7 @@
   "step1": [
     {
       "name":"What do you want to accomplish while working with us?",
+      "inputName": "accomplish",
       "option":[
         { "id": "step_1-1", "question": "I want more customers & leads","types":"accomplish","steps":"step1" },
         { "id": "step_1-2", "question": "I want to earn more sales","types":"accomplish" ,"steps":"step1"  },
@@ -15,6 +16,7 @@
   "step2": [
     {
       "name":"What strategies are you hoping to work on with us",
+      "inputName": "strategies",
       "option":[
         { "id": "step_2-1", "question": "Website Design", "optionKey": "website_design" },
         { "id": "step_2-2", "question": "Digital Advertising" },
@@ -30,6 +32,7 @@
   "website_design": [
     {
       "name": "Choose Your Website Type",
+      "inputName": "webtype",
       "options": [
         { "id": "website_type-1", "question": "E-Commerce" },
         { "id": "website_type-2", "question": "Blog" },
@@ -42,6 +45,7 @@
     },
     {
       "name": "Number of pages",
+      "inputName": "webNumberofPages",
       "options": [
         { "id": "num_of_page-1", "question": "1-5" },
         { "id": "num_of_page-2", "question": "5-10" },
@@ -53,7 +57,8 @@
       ]
     },
     {
-      "name": "Desgin Style",
+      "name": "Design Style",
+      "inputName": "webdesignstyle",
       "options": [
         {
           "id": "design_style-1",
@@ -100,6 +105,7 @@
     },
     {
       "name": "Copywriting",
+      "inputName": "webcopywriting",
       "options": [
         { "id": "copywriting-1", "question": "1-5 pages" },
         { "id": "copywriting-2", "question": "5-10 pages" },
@@ -110,6 +116,7 @@
     },
     {
       "name": "Seo",
+      "inputName": "webseo",
       "options": [
         { "id": "web_seo-1", "question": "10 keywords" },
         { "id": "web_seo-2", "question": "30 keywords" },
@@ -120,6 +127,7 @@
     },
     {
       "name": "Data Base Integration",
+      "inputName": "webdatabaseintegration",
       "options": [
         { "id": "data_base_integration-1", "question": "Basic" },
         { "id": "data_base_integration-2", "question": "Moderate" },
@@ -129,6 +137,7 @@
     },
     {
       "name": "Payment gateway integration",
+      "inputName": "paymentgatewayintegration",
       "options": [
         { "id": "payment_gateway_integration-1", "question": "Yes"  },
         { "id": "payment_gateway_integration-2", "question": "No"  }
@@ -136,6 +145,7 @@
     },
     {
       "name": "CMS",
+      "inputName": "cmsneed",
       "options": [
         { "id": "cms-1", "question": "Standard" },
         { "id": "cms-2", "question": "Advance" },
@@ -146,6 +156,7 @@
   "graphic_design": [
     {
       "name": "Choose your preferred service",
+      "inputName": "graphicPreferedService",
       "options": [
         { "id": "graphic_design--1", "question": "Logo & Branding"  },
         { "id": "graphic_design--2", "question": "Social Media Banners & Thumbnails (At Least 50 designs)"  },
@@ -159,6 +170,7 @@
   "social_media": [
     {
       "name": "How many channels do you want us to manage",
+      "inputName": "socialmedianoofchannels",
       "options": [
         { "id": "social_media--1", "question": "1 channel" },
         { "id": "social_media--2", "question": "2 channels" },
@@ -171,6 +183,7 @@
   "pitch_deck": [
     {
       "name": "Choose no. of slides",
+      "inputName": "pitchDeckNumberofSlides",
       "options": [
         { "id": "pitch_deck--1", "question": "1-5" },
         { "id": "pitch_deck--2", "question": "5-10" },
@@ -180,6 +193,7 @@
     },
     {
       "name": "Purpose of pitch deck",
+      "inputName": "purposeofpitchdeck",
       "options": [
         { "id": "purpose_of_pitch-deck--1", "question": "Seed Funding" },
         { "id": "purpose_of_pitch-deck--2", "question": "IPO" },
@@ -195,6 +209,7 @@
     {
       "id": "contact-1",
       "question": "Have you worked with any agency in the past?",
+      "inputName": "workedagency",
       "options": [
         { "id": "contact-Yes", "question": "Yes" },
         { "id": "contact-No", "question": "No" }
