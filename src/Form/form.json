@@ -149,7 +149,8 @@
       "options": [
         { "id": "cms-1", "question": "Standard" },
         { "id": "cms-2", "question": "Advance" },
-        { "id": "cms-3", "question": "Not required" }
+        { "id": "cms-3", "question": "Not required" },
+        { "id": "cms-4", "question": "Help me decide" }
       ]
     }
   ],
@@ -169,14 +170,15 @@
   ],
   "social_media": [
     {
-      "name": "How many channels do you want us to manage",
+      "name": "How many Social Media channels do you want us to manage",
       "inputName": "socialmedianoofchannels",
       "options": [
         { "id": "social_media--1", "question": "1 channel" },
         { "id": "social_media--2", "question": "2 channels" },
         { "id": "social_media--3", "question": "3 channels" },
         { "id": "social_media--4", "question": "4 channels" },
-        { "id": "social_media--5", "question": "5 or more than 5 channels" }
+        { "id": "social_media--5", "question": "5 or more than 5 channels" },
+        { "id": "social_media--6", "question": "Help me decide" }
       ]
     }
   ],
